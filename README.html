@@ -80,11 +80,18 @@ img {
 </div>
 <div id="landsat-image-time-series-analysis" class="section level1">
 <h1>Landsat image time-series analysis</h1>
-<p>Following semi-automated process chain was developed to download, store and process Landsat image time-series. 1) Download the data: All the historic as well as continuously acquired Landsat TM, ETM+ and OLI surface reflectance images with WRS-2 coordinates path 170 and row 55 at processing level LT1 were obtained from the United States Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center Science Processing Architecture (ESPA, <a href="http://espa.cr.usgs.gov" class="uri">http://espa.cr.usgs.gov</a>). 2) Pre-processing : After downloading the Landsat data, multiple pre-processing steps were applied: application of the FMASK algorithm for cloud masking, computation of NDVI and application of a forest mask. 3) Change detection : We used the BFAST Monitor method for breakpoint detection in Landsat NDVI time-series images for NRT forest change detection.</p>
+<p>Following semi-automated process chain was developed to download, store and process Landsat image time-series.</p>
+<ol style="list-style-type: decimal">
+<li><p>Download the data: All the historic as well as continuously acquired Landsat TM, ETM+ and OLI surface reflectance images with WRS-2 coordinates path 170 and row 55 at processing level LT1 were obtained from the United States Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center Science Processing Architecture (ESPA, <a href="http://espa.cr.usgs.gov" class="uri">http://espa.cr.usgs.gov</a>).</p></li>
+<li><p>Pre-processing : After downloading the Landsat data, multiple pre-processing steps were applied: application of the FMASK algorithm for cloud masking, computation of NDVI and application of a forest mask.</p></li>
+<li><p>Change detection : We used the BFAST Monitor method for breakpoint detection in Landsat NDVI time-series images for NRT forest change detection.</p></li>
+</ol>
 </div>
 <div id="spatial-database-structure" class="section level1">
 <h1>Spatial database structure</h1>
-<p>software : PostGre SQL 1)community-based monioting data 2)sattelite based forest change alert</p>
+<p>software : PostGre SQL</p>
+<p>1)Community-based monioting data</p>
+<p>2)Sattelite based forest change alert</p>
 </div>
 <div id="web-mapping" class="section level1">
 <h1>Web mapping</h1>

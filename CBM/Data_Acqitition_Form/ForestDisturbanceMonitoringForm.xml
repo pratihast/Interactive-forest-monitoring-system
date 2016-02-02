@@ -1,0 +1,572 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+	<h:head>
+		<h:title>Forest Disturbance Monitoring Form</h:title>
+		<model>
+
+			<instance>
+				<data id="build_Forest-Disturbance-Monitoring-Form_1361888394">
+					<meta><instanceID/></meta>
+					<!-- basic info  -->
+					<FormID/>
+					<BasicDetails>
+						<Name/>
+						<Date/>
+					</BasicDetails>
+					<Location>
+						<Woreda/>
+						<Kebele/>
+						<DistanceToRoad/>
+						<DistanceToNearestVillage/>
+						<DistanceToCoreForest/>
+						<GPSCoordinates/>
+				    </Location>
+				   <LargerPlot jr:template="">
+					  <GPSedge/>
+				   </LargerPlot>
+				   <Topography/>
+					 <is_forest/>
+						<is_forest_yes/>
+						<CanopyCover/>
+						<CanopyHeight/>
+						<CanopyStructure/>
+						<UnderstoryType/>
+						<DominantTreespecies/>
+						  <forest_type_other/>
+						<is_forest_no/>
+							<landuse_type_other/>
+							<Cropsgrown/>
+			       <is_Disturbance/>
+				         <is_Disturbance_yes/>
+						    <DateOfDisturbance/>
+							<Calendar/>
+							<EvidenceOfDisturbance/>
+							<ApproximateAreaAffected/>
+							<DriverOfDisturbance/>
+						 
+		                <is_Disturbance_No/> 
+				<counttree/>
+				<reforestation/>
+				<GeneralDescription>
+					<DescriptionOfArea/>
+					<DescriptionAudio/>
+				  </GeneralDescription>
+				  <TakePhoto>
+					<PhotoNorth/>
+					<PhotoSouth/>
+					<PhotoEast/>
+					<PhotoWeast/>
+					<PhotoUpward/>
+				  </TakePhoto>
+						
+				</data>
+			</instance>
+
+			<itext>
+				<translation lang="eng">
+						<!-- basic info  -->
+						<text id="/data/FormID:label"><value>Form ID</value></text>	
+						<text id="/data/BasicDetails:label"><value>Basic Details</value></text>
+						<text id="/data/BasicDetails/Name:label"><value>Name</value></text>
+						<text id="/data/BasicDetails/Date:label"><value>Date</value></text>
+						<text id="/data/Location:label"><value>Location</value></text>
+					  <text id="/data/Location/Woreda:label"><value>Woreda</value></text>
+					  <text id="/data/Location/Woreda:option0"><value>Adiyo</value></text>
+					  <text id="/data/Location/Woreda:option1"><value>Bita</value></text>
+					  <text id="/data/Location/Woreda:option2"><value>Chena</value></text>
+					  <text id="/data/Location/Woreda:option3"><value>Chetta</value></text>
+					  <text id="/data/Location/Woreda:option4"><value>Decha</value></text>
+					  <text id="/data/Location/Woreda:option5"><value>Gawata</value></text>
+					  <text id="/data/Location/Woreda:option6"><value>Gesha</value></text>
+					  <text id="/data/Location/Woreda:option7"><value>Gimbo</value></text>
+					  <text id="/data/Location/Woreda:option8"><value>Saylem</value></text>
+					  <text id="/data/Location/Woreda:option9"><value>Tello</value></text>
+					  <text id="/data/Location/Kebele:label"><value>Kebele</value></text>
+					  <text id="/data/Location/DistanceToRoad:label"><value>Distance to Road</value></text>
+					  <text id="/data/Location/DistanceToRoad:option0"><value>Less than 1 Km</value></text>
+					  <text id="/data/Location/DistanceToRoad:option1"><value>1- 2  Km</value></text>
+					  <text id="/data/Location/DistanceToRoad:option2"><value>2- 3  Km</value></text>
+					  <text id="/data/Location/DistanceToRoad:option3"> <value>more than 3 Km</value></text>
+					  <text id="/data/Location/DistanceToNearestVillage:label"><value>Distance to nearest village</value></text>
+					  <text id="/data/Location/DistanceToNearestVillage:option0"><value>Less than 1 Km</value></text>
+					  <text id="/data/Location/DistanceToNearestVillage:option1"><value>1-2 Km</value></text>
+					  <text id="/data/Location/DistanceToNearestVillage:option2"><value>2-3 Km</value></text>
+					  <text id="/data/Location/DistanceToNearestVillage:option3"><value>More than 3Km</value></text>
+					  <text id="/data/Location/DistanceToCoreForest:label"><value>Distance to Core forest</value></text>
+					  <text id="/data/Location/DistanceToCoreForest:option0"><value>Less than 1 Km</value></text>
+					  <text id="/data/Location/DistanceToCoreForest:option1"><value>1-2 Km</value></text>
+					  <text id="/data/Location/DistanceToCoreForest:option2"><value>2-3 Km</value></text>
+					  <text id="/data/Location/DistanceToCoreForest:option3"><value>more than 3 Km</value></text>
+					  <text id="/data/Location/GPSCoordinates:label"><value>GPS Coordinates</value></text>
+					  <text id="/data/LargerPlot:label"><value>If the plot area is large, take several GPS readings at the edges also.</value></text>
+					  <text id="/data/LargerPlot/GPSedge:label"><value>GPS reading at the edge</value></text>
+				  
+					  <text id="Topography_text"><value>Topography</value></text>
+					  <text id="Topography_option0"><value>Flat (no slope)</value></text>
+					  <text id="Topography_option1"><value>Medium slope</value></text>
+					  <text id="Topography_option2"><value>Steep slope</value></text>
+					  <text id="Topography_option3"><value>Valley bottom (near stream or river)</value></text>
+					  <text id="Topography_option4"><value>Hill crest (near top of hill)</value></text>
+						
+						  <!-- basic info  -->
+							<text id="is_forest_text"><value>Is this Forest?</value></text>
+								<text id="is_forest_yes_text"><value>Yes</value></text>
+									<text id="forest_type_text"><value>Forest Type</value> </text>
+										<text id="natural_forest_text"><value>Natural forest vegetation (no human land use)</value> </text>
+										<text id="degraded_forest_text"><value>Degraded forest</value> </text>
+										<text id="bambo_forest_text"><value>Bamboo forest</value> </text>
+										<text id="coffee_forest_text"><value>Coffee Forest</value> </text>
+										<text id="tree_plant_text"><value>Tree Plantation (Eucalyptus, Juniperus, etc.)</value> </text>
+										<text id="forest_type_other_text"><value>Other forest type</value> </text>
+											<text id="forest_type_other_description_text"><value>Describe other forest type</value> </text>
+										
+										<text id="CanopyCover_text">  <value>Canopy Cover</value></text>
+										  <text id="CanopyCover_option1"><value>Very open (1 - 15% canopy cover)</value></text>
+										  <text id="CanopyCover_option2"><value>Open (15 - 65% canopy cover)</value></text>
+										  <text id="CanopyCover_option3"><value>Closed (above 65% canopy cover)</value></text>
+										  
+										<text id="CanopyHeight_text"><value>Canopy Height</value></text>
+										   <text id="CanopyHeight_option1"><value>Low (less than 10m tall)</value></text>
+										   <text id="CanopyHeight_option2"><value>Medium (10 - 25m tall)</value></text>
+											<text id="CanopyHeight_option3"><value>High (more than 25m tall)</value></text>
+										
+										<text id="CanopyStructure_text"><value>Canopy Structure</value></text>
+											<text id="CanopyStructure_option1"><value>Monoplane (trees mostly same height)</value></text>
+										    <text id="CanopyStructure_option2"><value>Monoplane with emergents (few very large emergent trees)</value></text>
+										   <text id="CanopyStructure_option3"><value>Multilayered (trees of very different heights)</value></text>
+          
+										<text id="UnderstoryType_text"><value>Understory Type</value></text>
+                                            <text id="UnderstoryType_option0"><value>Woody shrubs</value></text>
+											  <text id="UnderstoryType_option1"><value>Non-woody shrubs</value></text>
+											  <text id="UnderstoryType_option2"><value>Coffee</value></text>
+											  <text id="UnderstoryType_option3"><value>Grass</value></text>
+											  <text id="UnderstoryType_option4"><value>Lianas</value></text>
+											  <text id="UnderstoryType_option5"><value>Other</value></text>
+										
+										<text id="DominantTreespecies_text"><value>Dominant Tree species (if forest)</value></text>
+										
+										
+											
+										
+																									
+								<text id="is_forest_no_text"><value>No</value></text>
+									<text id="landuse_type_text"><value>Landuse Type</value> </text>
+										<text id="herbaceous_text"><value>Herbaceous crops (maize, beans, etc)</value> </text>
+										<text id="mixed_crop_text"><value>Mixed crop</value>  </text>  
+										<text id="tree_text"><value>Tree crops (enset, etc.)</value></text>
+										<text id="coffee_text"><value>Coffee Investment Area</value> </text>
+										<text id="grass_crop_text"><value>Grassland / Grazing land (no trees)</value>  </text>  
+										<text id="settlemnet_text"><value>Residential - Settlement / Village</value></text>
+										<text id="road_text"><value>Road</value> </text>
+										<text id="wetland_crop_text"><value>Wetland</value>  </text>  
+										<text id="tea_text"><value>Tea Plantation</value></text>
+										<text id="landuse_type_other_text"><value>Other landuse type</value></text>
+											<text id="landuse_type_other_description_text"><value>Describe other landuse type</value></text>
+								<text id="is_forest_other_text"><value>Other</value></text>
+								
+								<text id="Cropsgrown_text"><value>Crops grown </value></text>
+								
+					<text id="is_Disturbance_text"><value>Is there any Disturbance in last 10 Years?</value></text>
+						<text id="is_Disturbance_yes_text"><value>Yes</value></text>
+							<text id="DateOfDisturbance:label"><value>Date of the Disturbance / Change</value> </text>
+							<text id="Calendar_text"><value>Calendar</value> </text>
+							      <text id="Calendar_option0"><value>ETHIOPIAN</value></text>
+								  <text id="Calendar_option1"><value>EUROPEAN</value></text>
+							
+							<text id="EvidenceOfDisturbance_text"><value>Evidence Of Disturbance</value> </text>
+											<text id="Clearcutting_text"><value>Clear-cutting</value> </text>
+											<text id="SelectiveLogging_text"><value>Selective Logging</value> </text>
+											<text id="Landslide_text"><value>Landslide</value> </text>
+											<text id="Fire_text"><value>Fire</value> </text>
+											<text id="Grazing_text"><value>Grazing</value> </text>
+											<text id="DeBarking_text"><value>De-Barking</value> </text>
+											<text id="Erosion_text"><value>Erosion</value> </text>
+											<text id="Other_text"><value>No evidence</value> </text>
+							
+							<text id="ApproximateAreaAffected_text"><value>Approximate area affected (hectares)</value> </text>
+							
+							<text id="DriverOfDisturbance_text"><value>Driver Of Disturbance</value> </text>
+											<text id="AgriculturalExpansion_text"><value>Agricultural Expansion</value> </text>
+											<text id="IntensiveCoffeeCultivation_text"><value>Intensive Coffee Cultivation</value> </text>
+											<text id="TimberHarvesting_text"><value>Timber Harvesting</value> </text>
+											<text id="CharcoalFirewoodCollection_text"><value>Charcoal / Firewood Collection</value> </text>
+											<text id="SettlementExpansion_text"><value>Settlement Expansion</value> </text>
+											<text id="Natural Disturbance_text"><value>Natural Disturbance</value> </text>
+											<text id="OtherType_text"><value>Other type</value> </text>							
+															
+					  <text id="is_Disturbance_no_text"><value>No</value></text>
+							
+				  
+				  <text id="counttree_text"><value>Total number of tree within the boundary</value></text>
+				  <text id="reforestation_text"><value> Is the area beaing reforested by ?</value></text>
+				        	<text id="NABU_option1"><value>NABU</value> </text>
+							<text id="OtherNGO_option2"><value>Other NGO</value> </text>
+							<text id="Private_option3"><value>Private</value> </text>
+							<text id="None_option4"><value>No reforrestation</value> </text>
+						
+				  
+					<!-- ok   -->
+				
+				  <text id="/data/GeneralDescription:label"><value>General Description</value></text>
+				  <text id="/data/GeneralDescription/DescriptionOfArea:label"><value>Description in text</value></text>
+				  <text id="/data/GeneralDescription/DescriptionOfArea:hint"><value>Give an additional description of the area, and the change that occurred</value></text>
+				  <text id="/data/GeneralDescription/DescriptionAudio:label"><value>Description in Audio</value></text>
+				  <text id="/data/TakePhoto:label"><value>Take Photo</value></text>
+				  <text id="/data/TakePhoto/PhotoNorth:label"><value>Take Photo in North direction</value></text>
+				  <text id="/data/TakePhoto/PhotoSouth:label"><value>Take Photo in South direction</value></text>
+				  <text id="/data/TakePhoto/PhotoEast:label"><value>Take Photo in East direction</value></text>
+				  <text id="/data/TakePhoto/PhotoWeast:label"><value>Take Photo in Weast direction</value></text>
+				  <text id="/data/TakePhoto/PhotoUpward:label"><value>Take Photo in Upward direction</value> </text>				
+							
+		</translation>
+			</itext>
+			<!-- basic info  -->
+			<bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+			<bind nodeset="/data/FormID" type="string"/>
+			<bind nodeset="/data/BasicDetails/Name" type="string"/>
+			<bind nodeset="/data/BasicDetails/Date" type="date"/>
+			
+		  <bind nodeset="/data/Location/Woreda" type="select1"/>
+		  <bind nodeset="/data/Location/Kebele" type="string"/>
+		  <bind nodeset="/data/Location/DistanceToRoad" type="select1"/>
+		  <bind nodeset="/data/Location/DistanceToNearestVillage" type="select1"/>
+		  <bind nodeset="/data/Location/DistanceToCoreForest" type="select1"/>
+		  <bind nodeset="/data/Location/GPSCoordinates" type="geopoint"/>
+		  <bind nodeset="/data/LargerPlot/GPSedge" type="geopoint"/>
+		  <bind nodeset="/data/Topography" type="select1"/>
+			
+			
+			<bind nodeset="/data/is_forest" type="select1" required="true()"/>
+			<!-- yes -->
+			<bind nodeset="/data/is_forest_yes" type="select1" relevant="selected(/data/is_forest, 'yes')" required="true()"/>
+			<bind nodeset="/data/forest_type_other" type="string" relevant="selected(/data/is_forest_yes, 'OTH')" required="true()"/>
+			<bind nodeset="/data/CanopyCover" type="select1" relevant="selected(/data/is_forest, 'yes')" required="true()"/>
+			<bind nodeset="/data/CanopyHeight" type="select1" relevant="selected(/data/is_forest, 'yes')" required="true()"/>
+			<bind nodeset="/data/CanopyStructure" type="select1" relevant="selected(/data/is_forest, 'yes')" required="true()"/>
+			<bind nodeset="/data/UnderstoryType" type="select1" relevant="selected(/data/is_forest, 'yes')" required="true()"/>
+			<bind nodeset="/data/DominantTreespecies" type="string" relevant="selected(/data/is_forest, 'yes')" />
+			
+			
+			<!-- no -->
+			<bind nodeset="/data/is_forest_no" type="select1" relevant="selected(/data/is_forest, 'no')" required="true()"/>
+			<bind nodeset="/data/landuse_type_other" type="string" relevant="selected(/data/is_forest_no, 'OTH')" required="true()"/>
+			<bind nodeset="/data/Cropsgrown" type="string" relevant="selected(/data/is_forest, 'no')" />
+			
+			<bind nodeset="/data/is_Disturbance" type="select1" required="true()"/>
+			<!-- yes -->  
+			<bind nodeset="/data/is_Disturbance_yes" type="select1" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<bind nodeset="/data/DateOfDisturbance" type="date" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<bind nodeset="/data/Calendar" type="select1" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<bind nodeset="/data/EvidenceOfDisturbance" type="select" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<bind nodeset="/data/ApproximateAreaAffected" type="decimal" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<bind nodeset="/data/DriverOfDisturbance" type="select" relevant="selected(/data/is_Disturbance, 'yes')" required="true()"/>
+			<!-- no -->
+			
+						
+			<bind nodeset="/data/counttree" type="int"/>
+			<bind nodeset="/data/reforestation" type="select1"/>
+			
+			<bind nodeset="/data/GeneralDescription/DescriptionOfArea" type="string"/>
+			<bind nodeset="/data/GeneralDescription/DescriptionAudio" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoNorth" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoSouth" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoEast" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoWeast" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoUpward" type="binary"/>
+			
+
+		</model>
+	</h:head>
+
+	<h:body>
+	  <!-- basic info  -->
+      <input ref="/data/FormID"><label ref="jr:itext('/data/FormID:label')"/></input>
+	  <group>
+      <label ref="jr:itext('/data/BasicDetails:label')"/>
+	  <input ref="/data/BasicDetails/Name"><label ref="jr:itext('/data/BasicDetails/Name:label')"/></input>
+      <input ref="/data/BasicDetails/Date"><label ref="jr:itext('/data/BasicDetails/Date:label')"/></input>
+    </group>
+	<group>
+      <label ref="jr:itext('/data/Location:label')"/>
+      <select1 ref="/data/Location/Woreda">
+        <label ref="jr:itext('/data/Location/Woreda:label')"/>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option0')"/>
+          <value>Adiyo</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option1')"/>
+          <value>Bita</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option2')"/>
+          <value>Chena</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option3')"/>
+          <value>Chetta</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option4')"/>
+          <value>Decha</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option5')"/>
+          <value>Gawata</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option6')"/>
+          <value>Gesha</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option7')"/>
+          <value>Gimbo</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option8')"/>
+          <value>Saylem</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/Woreda:option9')"/>
+          <value>Tello</value>
+        </item>
+      </select1>
+      <input ref="/data/Location/Kebele">
+        <label ref="jr:itext('/data/Location/Kebele:label')"/>
+      </input>
+      <select1 ref="/data/Location/DistanceToRoad">
+        <label ref="jr:itext('/data/Location/DistanceToRoad:label')"/>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToRoad:option0')"/>
+          <value>0</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToRoad:option1')"/>
+          <value>1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToRoad:option2')"/>
+          <value>2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToRoad:option3')"/>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/data/Location/DistanceToNearestVillage">
+        <label ref="jr:itext('/data/Location/DistanceToNearestVillage:label')"/>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToNearestVillage:option0')"/>
+          <value>0</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToNearestVillage:option1')"/>
+          <value>1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToNearestVillage:option2')"/>
+          <value>2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToNearestVillage:option3')"/>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/data/Location/DistanceToCoreForest">
+        <label ref="jr:itext('/data/Location/DistanceToCoreForest:label')"/>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToCoreForest:option0')"/>
+          <value>0</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToCoreForest:option1')"/>
+          <value>1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToCoreForest:option2')"/>
+          <value>2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/Location/DistanceToCoreForest:option3')"/>
+          <value>3</value>
+        </item>
+      </select1>
+      <input ref="/data/Location/GPSCoordinates">
+        <label ref="jr:itext('/data/Location/GPSCoordinates:label')"/>
+      </input>
+    </group>
+    <group>
+      <label ref="jr:itext('/data/LargerPlot:label')"/>
+      <repeat nodeset="/data/LargerPlot">
+        <input ref="/data/LargerPlot/GPSedge">
+          <label ref="jr:itext('/data/LargerPlot/GPSedge:label')"/>
+        </input>
+      </repeat>
+    </group>
+	<select1 ref="Topography">
+        <label ref="jr:itext('Topography_text')"/>
+        <item><label ref="jr:itext('Topography_option0')"/><value>FLAT</value></item>
+        <item><label ref="jr:itext('Topography_option1')"/><value>MSLP</value></item>
+        <item> <label ref="jr:itext('Topography_option2')"/><value>SSLP</value></item>
+        <item><label ref="jr:itext('Topography_option3')"/><value>VAL</value></item>
+        <item><label ref="jr:itext('Topography_option4')"/><value>CREST</value></item>
+      </select1>
+	  
+
+		<select1 ref="is_forest">
+			<label ref="jr:itext('is_forest_text')"/>
+			<item><label ref="jr:itext('is_forest_yes_text')"/><value>yes</value></item>
+			<item><label ref="jr:itext('is_forest_no_text')"/><value>no</value></item>
+			
+		</select1>
+
+		<!-- yes -->
+		<select1 ref="is_forest_yes">
+			<label ref="jr:itext('forest_type_text')"/>
+			<item><label ref="jr:itext('natural_forest_text')"/><value>NAT</value></item>
+			<item><label ref="jr:itext('degraded_forest_text')"/><value>DEG</value></item>
+			<item><label ref="jr:itext('bambo_forest_text')"/><value>BAM</value></item>
+			<item><label ref="jr:itext('coffee_forest_text')"/><value>COF</value></item>
+			<item><label ref="jr:itext('tree_plant_text')"/><value>TREE</value></item>
+			<item><label ref="jr:itext('forest_type_other_text')"/><value>OTH</value></item>
+		</select1>
+		<input ref="forest_type_other"><label ref="jr:itext('forest_type_other_description_text')"/></input>						
+		
+		<select1 ref="CanopyCover">
+			<label ref="jr:itext('CanopyCover_text')"/>
+			<item><label ref="jr:itext('CanopyCover_option1')"/><value>1</value></item>
+			<item><label ref="jr:itext('CanopyCover_option2')"/><value>2</value></item>
+			<item><label ref="jr:itext('CanopyCover_option3')"/> <value>3</value>
+			</item>
+		</select1>
+		
+		<select1 ref="CanopyHeight">
+			<label ref="jr:itext('CanopyHeight_text')"/>
+			<item><label ref="jr:itext('CanopyHeight_option1')"/><value>1</value></item>
+			<item><label ref="jr:itext('CanopyHeight_option2')"/><value>2</value></item>
+			<item><label ref="jr:itext('CanopyHeight_option3')"/><value>3</value></item>
+      </select1>
+	  
+      <select1 ref="CanopyStructure">
+        <label ref="jr:itext('CanopyStructure_text')"/>
+        <item><label ref="jr:itext('CanopyStructure_option1')"/><value>MONO</value></item>
+        <item><label ref="jr:itext('CanopyStructure_option2')"/><value>EMER</value></item>
+        <item><label ref="jr:itext('CanopyStructure_option3')"/><value>MULTI</value></item>
+      </select1>
+	  
+      <select1 ref="UnderstoryType">
+        <label ref="jr:itext('UnderstoryType_text')"/>
+        <item><label ref="jr:itext('UnderstoryType_option0')"/><value>WOOD</value></item>
+        <item><label ref="jr:itext('UnderstoryType_option1')"/><value>SHRB</value></item>
+        <item><label ref="jr:itext('UnderstoryType_option2')"/><value>COFF</value></item>
+        <item><label ref="jr:itext('UnderstoryType_option3')"/><value>GRASS</value></item>
+        <item><label ref="jr:itext('UnderstoryType_option4')"/><value>LIANA</value></item>
+        <item><label ref="jr:itext('UnderstoryType_option5')"/><value>OTH</value></item>
+      </select1>
+	  
+	  <input ref="DominantTreespecies"><label ref="jr:itext('DominantTreespecies_text')"/> </input>
+	  
+	 
+	                   
+			
+		<!-- no -->
+		<select1 ref="is_forest_no">
+			<label ref="jr:itext('landuse_type_text')"/>
+			<item><label ref="jr:itext('herbaceous_text')"/><value>CROP</value></item>
+			<item><label ref="jr:itext('mixed_crop_text')"/><value>MIX</value></item>
+			<item><label ref="jr:itext('tree_text')"/><value>TREE</value></item>
+			<item><label ref="jr:itext('coffee_text')"/><value>COF</value></item>
+			<item><label ref="jr:itext('grass_crop_text')"/><value>GRASS</value></item>
+			<item><label ref="jr:itext('settlemnet_text')"/><value>RES</value></item>
+			<item><label ref="jr:itext('road_text')"/><value>ROAD</value></item>
+			<item><label ref="jr:itext('wetland_crop_text')"/><value>WET</value></item>
+			<item><label ref="jr:itext('tea_text')"/><value>TEA</value></item>	
+			<item><label ref="jr:itext('landuse_type_other_text')"/><value>OTH</value></item>
+		</select1>
+		<input ref="landuse_type_other"><label ref="jr:itext('landuse_type_other_description_text')"/></input>
+		
+		<input ref="Cropsgrown"><label ref="jr:itext('Cropsgrown_text')"/> </input>
+	     
+        <select1 ref="is_Disturbance">
+			<label ref="jr:itext('is_Disturbance_text')"/>
+			<item><label ref="jr:itext('is_Disturbance_yes_text')"/><value>yes</value></item>
+			<item><label ref="jr:itext('is_Disturbance_no_text')"/><value>no</value></item>
+		</select1>
+
+		<!-- yes -->
+		<input ref="DateOfDisturbance"><label ref="jr:itext('DateOfDisturbance:label')"/></input>
+		<select1 ref="Calendar"> 
+			<label ref="jr:itext('Calendar_text')"/>
+				<item><label ref="jr:itext('Calendar_option0')"/><value>ETHIOPIAN</value></item>
+				<item><label ref="jr:itext('Calendar_option1')"/><value>EUROPEAN</value></item>
+		</select1>
+		 <select ref="EvidenceOfDisturbance">
+			<label ref="jr:itext('EvidenceOfDisturbance_text')"/>
+			<item><label ref="jr:itext('Clearcutting_text')"/><value>CC</value></item>
+			<item><label ref="jr:itext('SelectiveLogging_text')"/><value>SEL</value></item>
+			<item><label ref="jr:itext('Landslide_text')"/><value>LS</value></item>
+			<item><label ref="jr:itext('Fire_text')"/><value>FIR</value></item>
+			<item><label ref="jr:itext('Grazing_text')"/><value>GRA</value></item>
+			<item><label ref="jr:itext('DeBarking_text')"/><value>DEB</value></item>
+			<item><label ref="jr:itext('Erosion_text')"/><value>EOR</value></item>
+			<item><label ref="jr:itext('Other_text')"/><value>OTH</value></item>
+		</select>
+		
+      <input ref="ApproximateAreaAffected"><label ref="jr:itext('ApproximateAreaAffected_text')"/></input>
+	  
+	  <select ref="DriverOfDisturbance">
+			<label ref="jr:itext('DriverOfDisturbance_text')"/>
+			<item><label ref="jr:itext('IntensiveCoffeeCultivation_text')"/><value>ICOFF</value></item>
+			<item><label ref="jr:itext('TimberHarvesting_text')"/><value>TH</value></item>
+			<item><label ref="jr:itext('Landslide_text')"/><value>LS</value></item>
+			<item><label ref="jr:itext('CharcoalFirewoodCollection_text')"/><value>CFIR</value></item>
+			<item><label ref="jr:itext('SettlementExpansion_text')"/><value>SETE</value></item>
+			<item><label ref="jr:itext('Natural Disturbance_text')"/><value>DEB</value></item>
+			<item><label ref="jr:itext('Erosion_text')"/><value>EOR</value></item>
+			<item><label ref="jr:itext('OtherType_text')"/><value>OTH</value></item>
+		</select>
+	  
+         <input ref="counttree"><label ref="jr:itext('counttree_text')"/> </input>
+		 
+		 <select1 ref="reforestation">
+			<label ref="jr:itext('reforestation_text')"/>
+			<item><label ref="jr:itext('NABU_option1')"/><value>NABU</value></item>
+			<item><label ref="jr:itext('OtherNGO_option2')"/><value>OTHERNGO</value></item>
+			<item><label ref="jr:itext('Private_option3')"/> <value>PRIVATE</value></item>
+			<item><label ref="jr:itext('None_option4')"/> <value>NO</value></item>
+		</select1>
+	 	 
+		<!-- ok   -->
+		<group>
+      <label ref="jr:itext('/data/GeneralDescription:label')"/>
+      <input ref="/data/GeneralDescription/DescriptionOfArea">
+        <label ref="jr:itext('/data/GeneralDescription/DescriptionOfArea:label')"/>
+        <hint ref="jr:itext('/data/GeneralDescription/DescriptionOfArea:hint')"/>
+      </input>
+      <upload ref="/data/GeneralDescription/DescriptionAudio" mediatype="audio/*">
+        <label ref="jr:itext('/data/GeneralDescription/DescriptionAudio:label')"/>
+      </upload>
+    </group>
+    <group>
+      <label ref="jr:itext('/data/TakePhoto:label')"/>
+      <upload ref="/data/TakePhoto/PhotoNorth" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoNorth:label')"/>
+      </upload>
+      <upload ref="/data/TakePhoto/PhotoSouth" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoSouth:label')"/>
+      </upload>
+      <upload ref="/data/TakePhoto/PhotoEast" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoEast:label')"/>
+      </upload>
+      <upload ref="/data/TakePhoto/PhotoWeast" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoWeast:label')"/>
+      </upload>
+      <upload ref="/data/TakePhoto/PhotoUpward" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoUpward:label')"/>
+      </upload>
+    </group>
+					
+									
+		
+
+	</h:body>
+</h:html>

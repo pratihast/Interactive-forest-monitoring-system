@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kafa</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/openlayers3/ol.css" />
+    <link rel="stylesheet" href="vendor/ol3-layerswitcher/ol3-layerswitcher.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container-fluid header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-9">
+          <h1 class="header__title">UNESCO Kafa Biosphere Reserve</h1>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <img class="img-responsive header__logos-partners" src="images/logos.png">
+        </div>
+      </div><!-- /.row-->
+    </header>
+    <div class="container-fluid main-content">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#webmap" aria-controls="webmap" role="tab" data-toggle="tab">Webmap</a></li>
+            <li role="presentation"><a href="#local-observations" aria-controls="local observations" role="tab" data-toggle="tab">Local observations</a></li>
+            <li role="presentation"><a href="#project-description" aria-controls="project description" role="tab" data-toggle="tab">Project description</a></li>
+            <li role="presentation"><a href="#organisation" aria-controls="organisation" role="tab" data-toggle="tab">Organisation</a></li>
+            <li class="facebook-group" role="presentation"><a href="https://www.facebook.com/groups/kafa.forest.monitoring/" target="_blank">Near real time forest monitoring</a></li>
+          </ul>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+
+        <!-- Tab panes -->
+        <div class="col-xs-12 tab-content">
+          <div role="tabpanel" class="tab-pane row active" id="webmap">
+            <!-- Map -->
+            <div id="map" class="map col-sm-9">
+             <div id="popup" class="ol-popup">
+                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                 <div id="popup-content"></div>
+             </div>
+            </div>
+            <!-- GPX Form -->
+            <div class="form-legend-container col-sm-3">
+              <form id="form" class="form-horizontal gpx-form" action="forest_change_kebele_form.php" method="post" onsubmit="return checkDates();">
+                <div class="select-woreda select-administrative-unit form-group">
+                  <label for="Woreda" class="col-sm-4 col-md-3 control-label">Woreda</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select id="Woreda" class="form-control input-sm" name="Woreda" onchange="configureDropDownLists(this,document.getElementById('Kebele'))">
+                      <option>- Select -</option>
+                      <option value="Adiyo">Adiyo</option>
+                      <option value="Bita">Bita</option>
+                      <option value="Chena">Chena</option>
+                      <option value="Chetta">Chetta</option>
+                      <option value="Decha">Decha</option>
+                      <option value="Gawata">Gawata</option>
+                      <option value="Gesha">Gesha</option>
+                      <option value="Gimbo">Gimbo</option>
+                      <option value="Saylem">Saylem</option>
+                      <option value="Tello">Tello</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="select-kebele select-administrative-unit form-group">
+                  <label for="Kebele" class="col-sm-4 col-md-3 control-label">Kebele</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select id="Kebele" class="form-control input-sm" name="Kebele"></select>
+                  </div>
+                </div>
+                <div class="select-dates form-group">
+                  <div class="start-date select-date col-md-6">
+                    <label for="start-date" class="control-label">Start date</label>
+                    <input type="text" id="start-date" class="form-control input-sm" name="start-date">
+                  </div>
+                  <div class="end-date select-date col-md-6">
+                    <label for="end-date" class="control-label">End date</label>
+                    <input type="text" id="end-date" class="form-control input-sm" name="end-date">
+                  </div>
+                </div>
+                <div class="submit form-group">
+                  <input class="btn btn-primary gpx-form__submit" type="submit" value="Get GPX">
+                </div>
+              </form>
+              <!-- Legend -->
+              <div class="row legend">
+                <div class="col-xs-12">
+                  <h4>Legend</h4>
+                  <!-- Legend for biodiversity-data -->
+                  <div class="legend__layer-group">
+                    <h5 class="legend__layer-group-title">Biodiversity data (Dec 2014)</h5>
+                    <div id="legend__biodiversity-data" class="clearfix legend__layer legend__biodiversity">
+                      <span class="legend__item legend__item--bats">Bats</span>
+                      <span class="legend__item legend__item--bees">Bees</span>
+                      <span class="legend__item legend__item--beetles">Beetles</span>
+                      <span class="legend__item legend__item--birds">Birds</span>
+                      <span class="legend__item legend__item--dragonflies">Dragonflies</span>
+                      <span class="legend__item legend__item--fungi">Fungi</span>
+                      <span class="legend__item legend__item--herpetofauna">Herpetofauna</span>
+                      <span class="legend__item legend__item--large-mammals">Large mammals</span>
+                      <span class="legend__item legend__item--molluscs">Molluscs</span>
+                      <span class="legend__item legend__item--plants">Plants</span>
+                      <span class="legend__item legend__item--primates">Primates</span>
+                      <span class="legend__item legend__item--small-mammals">Small mammals</span>
+                    </div>
+                  </div><!-- ./legend__layer-group -->
+                  <!-- Legends for Near Realtime data -->
+                  <div class="legend__layer-group">
+                    <h5 class="legend__layer-group-title">Near real-time forest change</h5>
+                    <div id="legend__nrt-sat-2015-march" class="legend__layer">
+                      <img src="images/legends/bfm_nrt_mar2015.jpg">Based on Satellite (March 2015)
+                    </div>
+                    <div id="legend__nrt-sat-2015-february" class="legend__layer">
+                      <img src="images/legends/bfm_nrt_feb2015.jpg">Based on Satellite (February 2015)
+                    </div>
+                    <div id="legend__nrt-sat-2015-january" class="legend__layer">
+                      <img src="images/legends/bfm_nrt_jan2015.jpg">Based on Satellite (January 2015)
+                    </div>
+                    <div id="legend__nrt-sat-2014" class="legend__layer">
+                      <img src="images/legends/nrt_forestchange2014.jpg">Based on Satellite (2014)
+                    </div>
+                    <div id="legend__nrt-ground-obs-oct2014-mar2015" class="legend__layer">
+                      <img src="images/legends/nrt_local_30_03_2015.jpg">Ground observations(Oct 2014- Mar 2015)
+                    </div>
+                  </div><!-- ./legend__layer-group -->
+                  <!-- Legends for Historical Forest change data -->
+                  <div class="legend__layer-group">
+                    <h5 class="legend__layer-group-title">Historical forest change</h5>
+                    <div id="legend__hfc-ground-obs-2013" class="legend__layer">
+                      <img src="images/legends/Mobile_based_groundPoints2013.jpg">Ground observations (2013)
+                    </div>
+                    <div id="legend__hfc-ground-obs-2012" class="legend__layer">
+                      <img src="images/legends/Paper_based_groundPoints2013.jpg">Ground observations (2012)
+                    </div>
+                    <div id="legend__hfc-sat-2013" class="legend__layer">
+                      <img src="images/legends/forest_change_2012.jpg">Based on Satellite (2013)
+                    </div>
+                    <div id="legend__hfc-sat-2012" class="legend__layer">
+                      <img src="images/legends/forest_change_2012.jpg">Based on Satellite (2012)
+                    </div>
+                    <div id="legend__hfc-sat-2011" class="legend__layer">
+                      <img src="images/legends/forest_change_2011.jpg">Based on Satellite (2011)
+                    </div>
+                    <div id="legend__hfc-sat-2010" class="legend__layer">
+                      <img src="images/legends/forest_change_2010.jpg">Based on Satellite (2010)
+                    </div>
+                    <div id="legend__hfc-sat-2009" class="legend__layer">
+                      <img src="images/legends/forest_change_2009.jpg">Based on Satellite (2009)
+                    </div>
+                    <div id="legend__hfc-sat-2008" class="legend__layer">
+                      <img src="images/legends/forest_change_2008.jpg">Based on Satellite (2008)
+                    </div>
+                    <div id="legend__hfc-sat-2007" class="legend__layer">
+                      <img src="images/legends/forest_change_2007.jpg">Based on Satellite (2007)
+                    </div>
+                    <div id="legend__hfc-sat-2006" class="legend__layer">
+                      <img src="images/legends/forest_change_2006.jpg">Based on Satellite (2006)
+                    </div>
+                    <div id="legend__hfc-sat-2005" class="legend__layer">
+                      <img src="images/legends/forest_change_2005.jpg">Based on Satellite (2005)
+                    </div>
+                  </div><!-- ./legend__layer-group -->
+                  <!-- Legends for Administrations data -->
+                  <div class="legend__layer-group">
+                    <h5 class="legend__layer-group-title">Administrations</h5>
+                    <div id="legend__adm-kebeles" class="legend__layer">
+                      <img src="images/legends/Kebeles_utm.jpg">Kebeles
+                    </div>
+                    <div id="legend__adm-woredas" class="legend__layer">
+                      <img src="images/legends/woredas_2008_utm.jpg">Woredas
+                    </div>
+                    <div id="legend__adm-kafa-reserve" class="legend__layer">
+                      <img src="images/legends/br_outline_wgs.jpg">Kafa Biosphere Reserve
+                    </div>
+                  </div><!-- /.legend__layer-group -->
+                </div><!-- /.col-xs-12 -->
+              </div><!-- /.legend -->
+            </div><!-- /.form-legend-container -->
+          </div><!-- /.tabpanel map, form en legend -->
+
+          <div role="tabpanel" class="tab-pane row" id="local-observations">
+            <iframe id="frame1" class="col-md-12" src="http://scomp5062.wur.nl:8180/ODKAggregate" frameborder="0" width="100%" height="700"></iframe>
+          </div>
+
+          <div role="tabpanel" class="tab-pane row" id="project-description">
+            <div class="col-md-12 project-description">
+              <h4>
+                Biodiversity under Climate Change:<br>
+                Community Based Conservation, Management and Development Concepts for the Wild Coffee Forests
+              </h4>
+              <div class="logos">
+                <img class="logo" src="images/logo-nabu.png" alt="Logo NABU">
+                <img class="logo" src="images/logo-federal-ministry-encbn.png" alt="Logo Federal Ministry for the Environment, Nature Conservation, Building and Nuclear Safety">
+              </div>
+              <p>
+                Ethiopia is one of the most species-rich countries in the world. The montane cloud forests of the Kafa Biosphere Reserve in southwest Ethiopia are considered to be the origin and centre of Coffea arabica's genetic diversity. They are also home to many rare species. Together with the area's numerous wetlands, they form a carbon reservoir of supraregional importance. However, studies have shown that their habitats are threatened by overexploitation and climate change.<br>
+                The project aims to conserve and restore the Afromontane cloud forests and wetlands in order to preserve the ecosystem's resilience and unique biodiversity. It also intends to avoid carbon dioxide emissions and secure ecosystem services for the local population. In collaboration with the local population, ecosystems will be explored and restored (e.g. reforestation, restoration of catchment areas), secured (e.g. real-time monitoring, rangers) and transferred to sustainable, participatory community management. In order to simultaneously create awareness for the effects of global warming on biodiversity and in order to promote regional development, targeted development programmes for crafts, ecotourism and regional products as well as educational programs for children and youths and energy-efficient stoves will be introduced.<br>
+                The project supports the implementation of Ethiopia's Climate-Resilient Green Economy Strategy, ties climate and biodiversity conservation to regional development and helps the local population to independently ensure the long-term conservation of nature and natural resources as basis of their livelihood.<br>
+                <br>
+                More information at:
+              </p>
+              <ul>
+                <li><a href="http://www.kafa-biodiversity.com" target="_blank">Biodiversity Project Ethiopia</a></li>
+                <li><a href="http://www.international-climate-initiative.com/en/projects/projects/details/365/" target="_blank">International Climate Initiative (IKI): Community-based strategies for the protection of wild coffee's region of origin</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane row" id="organisation">
+            <div class="col-md-12 organisation">
+              <h5>The Nature and Biodiversity Conservation Union (NABU)</h5>
+              <p>
+                Charit&#233;stra&#223;e 3<br>
+                10117 Berlin<br>
+                Germany<br>
+                <br>
+                Contact:
+              </p>
+              <ul>
+                <li>Svane Bender-Kaphengst<br>
+                  Head of NABU&#39;s Africa Program<br>
+                  <a href="mailto:Svane.Bender@NABU.de">email</a>
+                </li>
+                <li>Mesfin Tekle<br>
+                  NABU Project Coordinator at Kafa Biosphere Reserve<br>
+                  <a href="mailto:Mesfin.Tekle@NABU.de">email</a>
+                </li>
+              </ul>
+              <br>
+              <h5>Wageningen University</h5>
+              <p>
+                Laboratory of Geo-information Science and Remote Sensing<br>
+                P.O. Box 47 - 6700 AA Wageningen<br>
+                The Netherlands<br>
+                <br>
+                Contact:
+              </p>
+              <ul>
+                <li>Arun Pratihast<br>
+      	          <a href="mailto:arun.pratihast@wur.nl">email</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.tab-content -->
+      </div> <!-- /.row -->
+    </div><!-- /.main-content -->
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="vendor/openlayers3/ol.js"></script>
+    <!--<script src="http://openlayers.org/en/v3.10.1/build/ol-debug.js"></script>-->
+    <script src="vendor/ol3-layerswitcher/ol3-layerswitcher.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
