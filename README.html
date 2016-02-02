@@ -61,18 +61,34 @@ img {
 
 
 
-<div id="ifms_test" class="section level1">
-<h1>IFMS_test</h1>
-<p>This is test page for IFMS</p>
+<div id="design-and-implementation-of-an-interactive-web-based-near-real-time-forest-monitoring-system" class="section level1">
+<h1>Design and implementation of an interactive web-based near real-time forest monitoring system</h1>
+<p>Data and code accompanying the paper:</p>
+<p>Pratihast A.K., DeVries, B., Avitabile, V., de Bruin, S., Herold, M., &amp; Bergsma, A. Design and implementation of an interactive web-based near real-time forest monitoring system PLoS ONE, in review</p>
 </div>
-<div id="cbm" class="section level1">
-<h1>CBM</h1>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This paper describes an interactive web-based near real-time (NRT) forest monitoring system using four levels of geographic information services: 1) the acquisition of continuous data streams from satellite and community-based monitoring using mobile devices, 2) NRT forest disturbance detection based on satellite time-series, 3) presentation of forest disturbance data through a web-based application.</p>
 </div>
-<div id="landsat-data" class="section level1">
-<h1>Landsat data</h1>
+<div id="community-based-forest-monioting" class="section level1">
+<h1>Community-based forest monioting</h1>
+<p>Data entry form was designed using open data kit (ODK).The form rendered on an Android platform through ODK Collect, which allows multiple data records to be entered (text variables, GPS position, photo etc.) and stored on a mobile device. After data collection, users transfered the collected data to the database server</p>
+<ol style="list-style-type: decimal">
+<li>ODK Form used for forest disturbance monioting in Ethiopia is stored in CBM/Form</li>
+<li>Saple data collected through ODK form is stiored in CBM/Data</li>
+</ol>
 </div>
-<div id="webmapping" class="section level1">
-<h1>Webmapping</h1>
+<div id="landsat-image-time-series-analysis" class="section level1">
+<h1>Landsat image time-series analysis</h1>
+<p>Following semi-automated process chain was developed to download, store and process Landsat image time-series. 1) Download the data: All the historic as well as continuously acquired Landsat TM, ETM+ and OLI surface reflectance images with WRS-2 coordinates path 170 and row 55 at processing level LT1 were obtained from the United States Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center Science Processing Architecture (ESPA, <a href="http://espa.cr.usgs.gov" class="uri">http://espa.cr.usgs.gov</a>). 2) Pre-processing : After downloading the Landsat data, multiple pre-processing steps were applied: application of the FMASK algorithm for cloud masking, computation of NDVI and application of a forest mask. 3) Change detection : We used the BFAST Monitor method for breakpoint detection in Landsat NDVI time-series images for NRT forest change detection.</p>
+</div>
+<div id="spatial-database-structure" class="section level1">
+<h1>Spatial database structure</h1>
+<p>software : PostGre SQL 1)community-based monioting data 2)sattelite based forest change alert</p>
+</div>
+<div id="web-mapping" class="section level1">
+<h1>Web mapping</h1>
+<p>Software used -Apache -GeoServer -OpenLayers -jQuery -PhP</p>
 </div>
 
 
