@@ -14,7 +14,7 @@ Data entry form was designed using open data kit (ODK).The form rendered on an A
 2) Saple data collected through ODK form is stiored in Data/sampleODKdata 
 3) Subset of 300 Community-based observation data are stiored in Data/Community-based observation.csv 
 
-Full community-based observation data can be downlaoded from www.cbm.wur.nl 
+Full community-based observation data can be downlaoded from www.cbm.wur.nl  
 
 
 # Landsat image time-series analysis
@@ -38,7 +38,7 @@ PostGre SQL data base was used to store Community-based monioting and Sattelite 
 # Web mapping 
 
 Apache, GeoServer, OpenLayers, jQuery, PhP and HTML was used for web-mapping. 
-All relevant codes used for this purpose are stored in Webgis folder Code/Webgis. 
+All relevant codes used for web mapping are stored in Webgis folder Code/Webgis. 
 
 PhP files allow  dynamic spatiotemporal query and allow users to generate forest change locations on-demand, to download forest change locations in usable GPS exchange format (GPX) format. 
 
