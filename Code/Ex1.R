@@ -1,1 +1,0 @@
-# R code to analyse the Landsat time series 

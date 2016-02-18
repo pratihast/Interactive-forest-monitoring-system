@@ -1,0 +1,368 @@
+/*
+ * CSS for the CBM web application
+ * this file is loaded last, so it overrides jQueryUI and Bootstrap CSS rules
+ */
+
+/*
+ * CBM Colors
+ * green = #86c13e / rgb(134, 193, 62)
+ */
+
+/*
+ * General style rules
+ * No resets are included, since the Bootstrap file includes a normalize.css
+ */
+/* Load custom Google font. */
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700);
+
+body {
+	font-family: Quattrocento Sans;
+	font-weight: normal;
+}
+
+
+/*
+ * Header
+ */
+.header {
+	background-attachment: scroll;
+	background-color: rgba(66, 66, 66, 0.8);
+	background-image: url(../images/header_bg.jpg);
+	background-position: 0 175px;
+	height: 175px;
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+}
+
+@media all and (min-width: 768px) {
+	.header {
+		background-position: 0 128px;
+		height: 100px;
+	}
+}
+
+.header__title {
+	color: white;
+	font-size: 32px;
+	margin: 2rem 0 1rem;
+  text-shadow: 1px 1px 3px #333;
+}
+
+@media all and (min-width: 550px) {
+	.header__title {
+		font-size: 36px;
+		margin: 2.8rem 0;
+	}
+}
+
+.header__logos-partners {
+	float: right;
+	margin-top: 1.5rem;
+}
+
+/*
+ * Main content
+ */
+.main-content {
+	position: relative;
+}
+
+/* Navigation tabs */
+.nav-tabs {
+	border-bottom: 1px solid #83b844;
+}
+
+.nav>li>a {
+	color: #444;
+}
+
+/* hover state tab */
+.nav-tabs>li>a:hover {
+	border-color: rgba(134, 193, 62, 0.25) rgba(134, 193, 62, 0.25) #83b844;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+  background-color: rgba(134, 193, 62, 0.25);
+	color: #222;
+}
+
+/* active tab */
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+	color: #FFF;
+  background-color: #86c13e;
+  border: 1px solid #83b844;
+}
+
+/* Link to Facebook group */
+.nav-tabs>li.facebook-group {
+	float: right;
+}
+
+.nav>li.facebook-group>a {
+	background: url('../images/facebook.png') no-repeat 0 3px;
+	border: none; /* in order to remove border on hover */
+	padding-left: 3.5rem;
+	padding-right: 0;
+}
+
+/* Stack tabs on mobile */
+@media all and (max-width: 785px){
+	.nav-tabs>li,
+	.nav>li.facebook-group {
+		float: none;
+	}
+
+	.nav>li.facebook-group>a {
+		background: url('../images/facebook.png') no-repeat 16px 3px;
+    padding-left: 5.25rem;
+	}
+}
+
+/* create some space between tabs and the actual content */
+.tab-content {
+	margin-top: 15px;
+}
+
+/*
+ * Webmap
+ */
+.map {
+	height: 700px;
+	margin-bottom: 1.5rem;
+}
+
+/*
+ * Form & Map legend
+ */
+/* When the form is positioned right of the map (Bootstrap breakpoint 'sm'), no padding-left */
+@media all and (min-width: 768px) {
+	.form-legend-container {
+		padding-left: 0;
+	}
+}
+
+.gpx-form .control-label {
+	text-align: left;
+}
+
+/* Select start and end date*/
+.select-dates {
+	margin-bottom: 0;
+}
+
+.select-date {
+	margin-bottom: 1.5rem;
+}
+
+
+/* Submit button */
+.gpx-form__submit {
+  float: right;
+  padding: 0.5rem 1.75rem;
+  margin-right: 1.5rem;
+}
+
+.btn-primary {
+	background-color: #86c13e;
+	border-color: #83b844;
+}
+
+.btn-primary:hover {
+	background-color: #7eb143;
+	border-color: #7aa24c;
+}
+
+/* Legend */
+.legend {
+	font-size: 90%;
+}
+
+.legend h5 {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+/* Biodiversity legend is a sprite
+ * To make replacing efficient, you only have to download a new legend graphic
+ * from GeoServer (see images/legends/readme.md)
+ */
+.legend__biodiversity .legend__item {
+	background-image: url('../images/legends/legend-biodiversity.png');
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 30px;
+	padding: 5px 5px 0 35px;
+	width: 50%;
+}
+
+/* Two-column layout on mobile and larger screens. On tablet, there's only
+room for a 1-column layout */
+@media all and (min-width: 768px) and (max-width: 990px){
+	.legend__biodiversity .legend__item {
+		float: none;
+		width: 100%;
+	}
+}
+
+.legend__item--bats {
+	background-position: 0 -216px;
+}
+
+.legend__item--bees {
+	background-position: 0 -184px;
+}
+
+.legend__item--beetles {
+	background-position: 0 -85px;
+}
+
+.legend__item--birds {
+	background-position: 0 2px;
+}
+
+.legend__item--dragonflies {
+	background-position: 0 -117px;
+}
+
+.legend__item--fungi {
+	background-position: 0 -351px;
+}
+
+.legend__item--herpetofauna {
+	background-position: 0 -54px;
+}
+
+.legend__item--large-mammals {
+	background-position: 0 -26px;
+}
+
+.legend__item--molluscs {
+	background-position: 0 -249px;
+}
+
+.legend__item--plants {
+	background-position: 0 -317px;
+}
+
+.legend__item--primates {
+	background-position: 0 -151px;
+}
+
+.legend__item--small-mammals {
+	background-position: 0 -282px;
+}
+
+/*
+ * Additional styling for OpenLayers components
+ */
+.layer-switcher .panel {
+	margin: 0;
+}
+
+/* Layergroup labels */
+.layer-switcher li.group > label {
+	margin-bottom: 0;
+}
+
+/* Layer labels */
+.layer-switcher li li label {
+	font-weight: normal;
+	font-size: 95%;
+	padding-left: 5px;
+	margin: 0;
+}
+
+/* OpenLayers Popup*/
+.ol-popup {
+  background-color: white;
+	border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	display: none;
+	font-size: 90%;
+	left: -50px;
+	padding: 15px;
+  position: absolute;
+	width: 300px;
+}
+
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "x";
+}
+
+/* Popup content */
+.feature-info__list {
+	padding: 0 16px;
+}
+
+.popup__download-position {
+	margin: 0;
+}
+
+/*
+ * Project description tab
+ */
+.project-description {
+	max-width: 900px;
+}
+
+.project-description h4 {
+	text-align: center;
+}
+
+.project-description .logos {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.project-description .logo {
+	max-width: 200px;
+}
+
+/*
+ * Organisation tab
+ */
+.organisation h5 {
+	font-weight: bold;
+}
+
+.organisation ul {
+	padding-left: 30px;
+}

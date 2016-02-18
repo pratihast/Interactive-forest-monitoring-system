@@ -75,27 +75,33 @@ img {
 <p>Data entry form was designed using open data kit (ODK).The form rendered on an Android platform through ODK Collect, which allows multiple data records to be entered (text variables, GPS position, photo etc.) and stored on a mobile device. After data collection, users transfered the collected data to the database server</p>
 <ol style="list-style-type: decimal">
 <li>ODK Form used for forest disturbance monioting in Ethiopia is stored in CBM/Form</li>
-<li>Saple data collected through ODK form is stiored in CBM/Data</li>
+<li>Saple data collected through ODK form is stiored in Data/sampleODKdata</li>
+<li>Subset of 300 Community-based observation data are stiored in Data/Community-based observation.csv</li>
 </ol>
+<p>Full community-based observation data can be downlaoded from www.cbm.wur.nl</p>
 </div>
 <div id="landsat-image-time-series-analysis" class="section level1">
 <h1>Landsat image time-series analysis</h1>
-<p>Following semi-automated process chain was developed to download, store and process Landsat image time-series.</p>
+<p>Following process chain was developed to download, store and process Landsat image time-series.</p>
 <ol style="list-style-type: decimal">
-<li><p>Download the data: All the historic as well as continuously acquired Landsat TM, ETM+ and OLI surface reflectance images with WRS-2 coordinates path 170 and row 55 at processing level LT1 were obtained from the United States Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center Science Processing Architecture (ESPA, <a href="http://espa.cr.usgs.gov" class="uri">http://espa.cr.usgs.gov</a>).</p></li>
+<li><p>Download the data: All the historic as well as continuously acquired Landsat TM, ETM+ and OLI surface reflectance images with WRS-2 coordinates path 170 and row 55 at processing level LT1 were obtained from the United States Geological Survey (USGS) Earth Resources Observation and Science (EROS) Center Science Processing Architecture (ESPA, <a href="http://espa.cr.usgs.gov" class="uri">http://espa.cr.usgs.gov</a>). Scene ID of all data used is stored in Data/Landsat time-series.csv.</p></li>
 <li><p>Pre-processing : After downloading the Landsat data, multiple pre-processing steps were applied: application of the FMASK algorithm for cloud masking, computation of NDVI and application of a forest mask.</p></li>
 <li><p>Change detection : We used the BFAST Monitor method for breakpoint detection in Landsat NDVI time-series images for NRT forest change detection.</p></li>
 </ol>
+<p>code for this analysis is stored in Code/Landsat time-series analysis/BFAST_forestchangedetection.R</p>
 </div>
 <div id="spatial-database-structure" class="section level1">
 <h1>Spatial database structure</h1>
-<p>software : PostGre SQL</p>
-<p>1)Community-based monioting data</p>
-<p>2)Sattelite based forest change alert</p>
+<p>PostGre SQL data base was used to store Community-based monioting and Sattelite based forest change alert data data.</p>
 </div>
 <div id="web-mapping" class="section level1">
 <h1>Web mapping</h1>
-<p>Software used -Apache -GeoServer -OpenLayers -jQuery -PhP</p>
+<p>Apache, GeoServer, OpenLayers, jQuery, PhP and HTML was used for web-mapping. All relevant codes used for this purpose are stored in Webgis folder Code/Webgis.</p>
+<p>PhP files allow dynamic spatiotemporal query and allow users to generate forest change locations on-demand, to download forest change locations in usable GPS exchange format (GPX) format.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>To do</p>
 </div>
 
 
