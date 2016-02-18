@@ -32,7 +32,7 @@ code for this analysis is stored in Code/Landsat time-series analysis/BFAST_fore
 
 
 # Spatial database structure
-PostGre SQL data base was used to store Community-based monioting and Sattelite based forest change alert data data. 
+PostGre SQL database was used to store Community-based monioting and Sattelite based forest change alert data data. 
 
 
 # Web mapping 
