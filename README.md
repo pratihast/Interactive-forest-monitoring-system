@@ -1,7 +1,7 @@
 # Design and implementation of an interactive web-based near real-time forest monitoring system
-Data and code accompanying the paper:
-
-Pratihast A.K., DeVries, B., Avitabile, V., de Bruin, S., Herold, M., &amp; Bergsma, A. Design and implementation of an interactive web-based near real-time forest monitoring system PLoS ONE, in review 
+Data and code accompanying the paper "Design and implementation of an interactive web-based near real-time forest monitoring system" 
+Published: March 31, 2016 
+http://dx.doi.org/10.1371/journal.pone.0150935 
 
 # Introduction
 This paper describes an interactive web-based near real-time (NRT) forest monitoring system using four levels of geographic information services: 1) the acquisition of continuous data streams from satellite and community-based monitoring using mobile devices, 2) NRT forest disturbance detection based on satellite time-series, 3) presentation of forest disturbance data through a web-based
@@ -44,6 +44,6 @@ PhP files allow  dynamic spatiotemporal query and allow users to generate forest
 
 #References
 
-To do 
+Pratihast AK, DeVries B, Avitabile V, de Bruin S, Herold M, Bergsma A (2016) Design and Implementation of an Interactive Web-Based Near Real-Time Forest Monitoring System. PLoS ONE 11(3): e0150935. doi:10.1371/journal.pone.0150935 
 
 
