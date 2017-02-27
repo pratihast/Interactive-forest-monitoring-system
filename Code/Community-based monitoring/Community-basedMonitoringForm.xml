@@ -54,7 +54,7 @@
 					<PhotoNorth/>
 					<PhotoSouth/>
 					<PhotoEast/>
-					<PhotoWeast/>
+					<PhotoWest/>
 					<PhotoUpward/>
 				  </TakePhoto>
 						
@@ -214,7 +214,7 @@
 				  <text id="/data/TakePhoto/PhotoNorth:label"><value>Take Photo in North direction</value></text>
 				  <text id="/data/TakePhoto/PhotoSouth:label"><value>Take Photo in South direction</value></text>
 				  <text id="/data/TakePhoto/PhotoEast:label"><value>Take Photo in East direction</value></text>
-				  <text id="/data/TakePhoto/PhotoWeast:label"><value>Take Photo in Weast direction</value></text>
+				  <text id="/data/TakePhoto/PhotoWest:label"><value>Take Photo in West direction</value></text>
 				  <text id="/data/TakePhoto/PhotoUpward:label"><value>Take Photo in Upward direction</value> </text>				
 							
 		</translation>
@@ -270,7 +270,7 @@
 			<bind nodeset="/data/TakePhoto/PhotoNorth" type="binary"/>
 			<bind nodeset="/data/TakePhoto/PhotoSouth" type="binary"/>
 			<bind nodeset="/data/TakePhoto/PhotoEast" type="binary"/>
-			<bind nodeset="/data/TakePhoto/PhotoWeast" type="binary"/>
+			<bind nodeset="/data/TakePhoto/PhotoWest" type="binary"/>
 			<bind nodeset="/data/TakePhoto/PhotoUpward" type="binary"/>
 			
 
@@ -557,8 +557,8 @@
       <upload ref="/data/TakePhoto/PhotoEast" mediatype="image/*">
         <label ref="jr:itext('/data/TakePhoto/PhotoEast:label')"/>
       </upload>
-      <upload ref="/data/TakePhoto/PhotoWeast" mediatype="image/*">
-        <label ref="jr:itext('/data/TakePhoto/PhotoWeast:label')"/>
+      <upload ref="/data/TakePhoto/PhotoWest" mediatype="image/*">
+        <label ref="jr:itext('/data/TakePhoto/PhotoWest:label')"/>
       </upload>
       <upload ref="/data/TakePhoto/PhotoUpward" mediatype="image/*">
         <label ref="jr:itext('/data/TakePhoto/PhotoUpward:label')"/>
